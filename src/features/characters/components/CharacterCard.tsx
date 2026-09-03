@@ -1,4 +1,4 @@
-import type { Character } from '../api/rickAndMorty';
+import type { Character } from '../../../api/rickAndMorty';
 
 interface CharacterCardProps {
   character: Character;
