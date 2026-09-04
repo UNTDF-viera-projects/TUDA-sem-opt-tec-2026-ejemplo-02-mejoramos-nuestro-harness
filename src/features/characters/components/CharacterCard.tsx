@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import type { Character } from '../../../api/rickAndMorty';
 
 interface CharacterCardProps {
@@ -39,14 +40,20 @@ export default function CharacterCard({
       />
 
       <div className="relative aspect-square overflow-hidden border-b-2 border-neon-pink">
-        <img
-          src={character.image}
-          alt={character.name}
-          loading="lazy"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover contrast-110 saturate-125"
-        />
+        <Link
+          to={`/characters/${character.id}`}
+          aria-label={`Ver ficha de ${character.name}`}
+          className="block h-full w-full"
+        >
+          <img
+            src={character.image}
+            alt={character.name}
+            loading="lazy"
+            width={300}
+            height={300}
+            className="h-full w-full object-cover contrast-110 saturate-125"
+          />
+        </Link>
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(13,2,33,0.85)_100%)]"
@@ -70,7 +77,12 @@ export default function CharacterCard({
           UNIT_{index + 1} // C-137
         </p>
         <h2 className="text-glow-card mb-3.5 text-2xl uppercase leading-tight text-white">
-          {character.name}
+          <Link
+            to={`/characters/${character.id}`}
+            className="transition hover:text-neon-cyan"
+          >
+            {character.name}
+          </Link>
         </h2>
 
         <dl className="grid gap-2 border border-dashed border-neon-cyan/40 bg-neon-cyan/5 p-3">
@@ -86,6 +98,13 @@ export default function CharacterCard({
             </div>
           ))}
         </dl>
+
+        <Link
+          to={`/characters/${character.id}`}
+          className="mt-3 inline-block border border-neon-yellow px-3 py-1.5 font-mono text-xs uppercase tracking-[0.2em] text-neon-yellow transition hover:bg-neon-yellow hover:text-void"
+        >
+          Ver ficha →
+        </Link>
       </div>
     </article>
   );

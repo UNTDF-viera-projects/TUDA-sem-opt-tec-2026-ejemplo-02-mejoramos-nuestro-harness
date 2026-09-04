@@ -97,6 +97,18 @@ export async function getFirstFiveCharacters(
   return data;
 }
 
+export async function getCharacterById(
+  id: string | number,
+  signal?: AbortSignal,
+): Promise<Character> {
+  const response = await fetch(`${API_BASE}/character/${id}`, { signal });
+  if (!response.ok) {
+    throw new Error(`Rick and Morty API error: ${response.status}`);
+  }
+  const data: Character = await response.json();
+  return data;
+}
+
 export function getFirstFiveEpisodes(signal?: AbortSignal): Promise<Episode[]> {
   return fetchFirstFive<Episode>('episode', signal);
 }

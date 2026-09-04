@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Layout from './components/Layout';
-import Characters from './features/characters';
+import Characters, { CharacterDetailScreen } from './features/characters';
 import Episodes from './features/episodes';
 import Home from './features/home';
 import Locations from './features/locations';
@@ -23,6 +23,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="characters" element={<Characters />} />
+          <Route path="characters/:id" element={<CharacterDetailScreen />} />
           <Route path="episodes" element={<Episodes />} />
           <Route path="locations" element={<Locations />} />
           <Route path="*" element={<NotFound />} />
