@@ -1,6 +1,6 @@
 ---
 description: Revisión ortográfica y gramatical de los textos de usuario.
-agent: build
+agent: all
 model: opencode/big-pickle
 ---
 

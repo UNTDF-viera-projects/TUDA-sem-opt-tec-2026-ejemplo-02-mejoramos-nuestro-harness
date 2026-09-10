@@ -15,3 +15,11 @@ Por cada tema puedes ver las reglas o convenciones particulares que aplican.
 | ----------------- | -------------------------------------------- |
 | Code Style        | [Code Style](./rules/styles.md)              |
 | Code Arquitectura | [Code Arquitectura](./rules/architecture.md) |
+
+## Harness
+
+| Pieza      | Path                                  | Alcance                                     |
+| ---------- | ------------------------------------- | ------------------------------------------- |
+| Skills     | `.agents/skills/<name>/SKILL.md`      | Estándar Agent Skills                       |
+| Subagentes | `.opencode/agents/<name>.md`          | OpenCode (`ask`, `reviewer`)                |
+| Commands   | `.opencode/commands/<name>.md`        | OpenCode (`/implement`, `/ask`, `/grammar`) |

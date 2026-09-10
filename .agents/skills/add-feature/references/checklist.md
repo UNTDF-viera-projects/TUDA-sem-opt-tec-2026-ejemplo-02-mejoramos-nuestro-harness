@@ -9,4 +9,3 @@ Todo esto tiene que existir en `src/features/<feature>/`:
 - [ ] Estilos con Tailwind; piezas globales en `src/components`
 
 Referencia: `src/features/characters`.
-
