@@ -5,6 +5,7 @@ const NAV = [
   { to: '/characters', label: 'Personajes', end: false },
   { to: '/episodes', label: 'Episodios', end: false },
   { to: '/locations', label: 'Ubicaciones', end: false },
+  { to: '/weather', label: 'Clima', end: false },
 ];
 
 export default function Layout() {

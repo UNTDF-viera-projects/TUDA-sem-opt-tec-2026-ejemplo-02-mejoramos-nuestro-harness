@@ -11,6 +11,7 @@ import {
 import EpisodeCard from '../../components/EpisodeCard';
 import LocationCard from '../../components/LocationCard';
 import { CharacterCard } from '../characters';
+import { WeatherWidget } from '../weather';
 
 interface SectionState<T> {
   data: T[];
@@ -111,6 +112,8 @@ export default function Home() {
 
   return (
     <div className="grid gap-14">
+      <WeatherWidget />
+
       <section aria-label="Primeros cinco personajes">
         <SectionHeader title="Personajes" to="/characters" count="826" />
         <SectionStatus

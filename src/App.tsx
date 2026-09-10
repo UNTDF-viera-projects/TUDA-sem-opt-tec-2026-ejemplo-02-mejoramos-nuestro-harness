@@ -4,6 +4,7 @@ import Characters, { CharacterDetailScreen } from './features/characters';
 import Episodes from './features/episodes';
 import Home from './features/home';
 import Locations from './features/locations';
+import Weather from './features/weather';
 
 function NotFound() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="characters/:id" element={<CharacterDetailScreen />} />
           <Route path="episodes" element={<Episodes />} />
           <Route path="locations" element={<Locations />} />
+          <Route path="weather" element={<Weather />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
